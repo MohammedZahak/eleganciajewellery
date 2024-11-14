@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#home"> <!-- Link to homepage -->
+            <img src="elegancia-jewellery-high-resolution-logo-transparent.png" alt="Elegancia Logo" class="logo">
+        </a>
+        <h1>ELEGANCIA JEWELLERY</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Video Section -->
+    <section id="video">
+        <video autoplay muted loop style="width: 100%; height: auto;">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <main>
+        <section id="products">
+            <center><h2>Our Products</h2></center>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="ring.jpg" alt="Gold Ring">
+                    <h3>Gold Ring</h3>
+                    <p>$500</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="neclace.jpg" alt="Diamond Necklace">
+                    <h3>Diamond Necklace</h3>
+                    <p>$1200</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="bracelet.jpg" alt="Silver Bracelet">
+                    <h3>Silver Bracelet</h3>
+                    <p>$300</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="errings.jpg" alt="Pearl Earrings">
+                    <h3>Pearl Earrings</h3>
+                    <p>$150</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="brooche.jpg" alt="Brooche">
+                    <h3>Brooche</h3>
+                    <p>$150</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Nocepin.jpg" alt="Gold Nose Pin">
+                    <h3>Gold Nose Pin</h3>
+                    <p>$150</p>
+                    <button>Add to Cart</button>
+                </div>
+                
+                <!-- Repeat products as needed -->
+            </div>
+        </section>
+         <!-- About Section -->
+         <section id="about">
+            <center><h2>About Us</h2></center>
+            <p>
+                At the heart of our brand lies a dedication to crafting exquisite jewelry that resonates with elegance and sophistication. Each piece is thoughtfully designed, reflecting our commitment to quality and artistry.
+            </p>
+            <p>
+                Our artisans pour their passion into every detail, creating timeless pieces that tell a story and celebrate individuality. From stunning engagement rings to delicate necklaces, our collection is curated for those who appreciate the finer things in life.
+            </p>
+            <p>
+                We believe that jewelry should transcend trends and become a cherished part of your legacy. Our commitment to sustainability means we ethically source our materials, creating a positive impact on the world.
+            </p>
+            <p>
+                Each piece embodies our values of integrity, creativity, and craftsmanship. Our boutique offers a personalized experience, guiding you through our exclusive collections to find a piece that truly speaks to you.
+            </p>
+            <p>
+                Thank you for choosing us to be a part of your journey. We invite you to explore our collection and discover the magic that awaits within each piece. Let us help you find the perfect expression of your unique story.
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-line"></div>
+        <div class="globe-container">
+            <img src="globe-with-meridians.256x256.png" alt="Globe" class="globe-icon"> <!-- Add your globe icon path -->
+            <span>India</span>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-services">
+            <div class="services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Custom Jewelry Design</li>
+                    <li>Jewelry Repair</li>
+                    <li>Engraving Services</li>
+                    <li>Personal Shopping Assistance</li>
+                </ul>
+            </div>
+            <div class="maison">
+                <h3>Our Maison</h3>
+                <ul>
+                    <li>Careers</li>
+                    <li>Workmanship</li>
+                    <li>Artistry</li>
+                    <li>Ethics</li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Stay Up to Date</h3>
+                <p>Subscribe to our newsletter for the latest updates:</p>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Cookies Policy</a> |
+            <a href="#">Terms of Website Use</a> |
+            <a href="#">Terms of Sale</a>
+        </div>
+        <div class="footer-alert">
+            <p>© 2024 Elegancia Jewelry Shop. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="backToTop" title="Go to top">↑</button>
+    <script>
+        // Get the button
+        const backToTopButton = document.getElementById('backToTop');
+    
+        // Show the button when the user scrolls down 100 pixels from the top
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    
+        // Scroll to the top when the button is clicked
+        backToTopButton.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+    
+</body>
+</html>

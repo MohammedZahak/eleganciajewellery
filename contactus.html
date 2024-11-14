@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jewelry Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("9lNXxudw5xWdwfpDX"); // Replace with your EmailJS Public Key
+        })();
+        
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent form from submitting the usual way
+            
+            emailjs.sendForm('service_urff73f', 'template_vvnhwmj', event.target)
+                .then(function() {
+                    alert('Your message has been sent!');
+                }, function(error) {
+                    alert('There was an error sending your message. Please try again later.');
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="elegancia-jewellery-high-resolution-logo-transparent.png" alt="Elegancia Logo" class="logo">
+        <h1>ELEGANCIA JEWELLERY</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Us Section with Form and Contact Details -->
+    <main>
+        <section id="contact" style="display: flex; align-items: center; gap: 30px; padding: 20px;">
+            <div class="contact-details" style="flex: 1;">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need assistance, feel free to reach out to us!</p>
+                
+                <!-- Contact Form -->
+                <form id="contact-form" onsubmit="sendEmail(event)" style="display: flex; flex-direction: column; gap: 15px;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required style="padding: 10px; width: 100%;">
+
+                    <!-- Hidden input for default email address -->
+                    <input type="hidden" id="email" name="email" value="zahak.cr7@gmail.com">
+                    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required style="padding: 10px; width: 100%;">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required style="padding: 10px; width: 100%;"></textarea>
+                    
+                    <button type="submit" style="padding: 10px; background-color: #333; color: white; border: none; cursor: pointer;">Send Message</button>
+                </form>
+                
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> | 
+                    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                </p>
+                
+                <h3>Help</h3>
+                <p><a href="#return-orders">Return Your Orders</a></p>
+                <p><a href="#track-orders">Track Your Order</a></p>
+            </div>
+            
+            <!-- Contact Image on Right Side -->
+            <!-- Contact Image on Right Side -->
+            <div class="contact-image">
+                <img src="contactus.png" alt="Customer Service">
+            </div>
+
+        </section>
+
+        <!-- Additional Sections: Return Orders & Track Orders -->
+        <section id="return-orders">
+            <h2>Return Your Orders</h2>
+            <p>We're here to help with any returns. To start the return process, please reach out to our customer service team or use the "Return Your Orders" link provided in your account.</p>
+        </section>
+        
+        <section id="track-orders">
+            <h2>Track Your Order</h2>
+            <p>To track your order, please enter your order number and click on the link provided. You can also contact our support team for further assistance.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jewelry Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
